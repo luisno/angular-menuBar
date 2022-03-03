@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'estetica';
   showFiller = false;
+
+  // colores
+  // style="background-color: #d0a6a5"
 }

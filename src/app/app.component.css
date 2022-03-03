@@ -1,5 +1,83 @@
-mat-sidenav{
-  background-color: #009688;
+.companyName{
+  font-size: 150%;
 }
 
-.background-primary { background-color: #f0e3e2; }
+.mat-toolbar{
+  height: 7.5vh;
+  position: fixed;
+  z-index: 100;
+  width: 100%  !important;
+}
+.mat-sidenav-container{
+  position: fixed;
+  background-color: whitesmoke;
+}
+
+div {
+  overflow: inherit;
+}
+
+body {
+  height: 10000px;
+}
+
+a{
+  text-decoration: none;
+  font-size: 110%;
+  white-space: normal;
+}
+
+button{
+  font-size: 110%;
+  min-width: min-content;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+main {
+  overflow-y: auto;
+}
+
+.menuBard{
+  font-size: 90%;
+}
+/* implementacion de styky para que el componente se quede fijado*/
+.fixed {
+  position: fixed;
+  width: 100%;
+  transition: 0.2s linear;
+  top: 0px;
+}
+
+.nofixed {
+  position: static;
+  transition: 0.2s linear;
+  top: -50px;
+}
+
+/* custom scroll bar */
+mat-sidenav-content::-webkit-scrollbar{
+  width: 7px;
+}
+mat-sidenav-content::-webkit-scrollbar-thumb{
+  background: darkgray;
+  border-radius: 5px;
+}
+
+/* margin dinamico */
+.router-content{
+  padding: 20px 20px 40px 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 598px) {
+  .router-content{
+    padding: 20px 20px 40px 20px;
+    margin-top: 60px;
+  }
+}
