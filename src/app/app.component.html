@@ -1,37 +1,13 @@
-<div>
+<mat-sidenav-container style="background-color: whitesmoke" fullscreen >
+  <mat-sidenav #sidenav mode="over" class="background-primary">
+    <p style="padding: 10px">Micro pigmentacion</p>
+    <p style="padding: 10px">Micro pigmentacion</p>
+  </mat-sidenav>
   <mat-toolbar style="background-color: #d0a6a5">
-    <div fxShow="true" fxHide.gt-sm="true">
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
-
-    <a mat-button class="companyName" >
-      <span> Z A H A</span>
-    </a>
-    <span class="example-spacer"></span>
-    <div fxShow="true" fxHide.lt-md="true">
-      <a class="menuBard" mat-button >Listado de productos</a>
-      <a class="menuBard" mat-button >login</a>
-      <a class="menuBard" mat-button >
-        <mat-icon aria-hidden="false" aria-label="Example home icon">addchart</mat-icon>
-        Registrar Articulos</a>
-    </div>
-
+    <button fxShow="true" fxHide.gt-sm="true" (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon style="color: white">menu</mat-icon>
+    </button>
+    <span style="color: white; font-family: Trebuchet MS,serif">Z A H A</span>
+    <button mat-icon-button fxShow="true" fxHide.lt-md="true"> Menu normal</button>
   </mat-toolbar>
-  <mat-sidenav-container fxFlexFill class="example-container" fullscreen>
-
-    <mat-sidenav mode="push" color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
-      <div fxLayout="column" style="margin-top: 60px">
-        <a mat-button  > Listado de productos</a>
-        <a  mat-button >login</a>
-        <a  mat-button >cerrar sesión</a>
-      </div>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <div class="router-content">
-        <p>Hola</p>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
+</mat-sidenav-container>
