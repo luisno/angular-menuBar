@@ -10,22 +10,26 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatMenuModule} from "@angular/material/menu";
+import { MenuPrincipalComponent } from './shared/menu-principal/menu-principal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuPrincipalComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    FlexLayoutModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatListModule,
+        FlexLayoutModule,
+        MatMenuModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

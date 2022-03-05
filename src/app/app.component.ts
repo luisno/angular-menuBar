@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Renderer2} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'estetica';
-  showFiller = false;
 
-  // colores
-  // style="background-color: #d0a6a5"
+  public estaEnElMenu = false;
+  public estaEnElBoton = false;
+
+  constructor(private ren: Renderer2) {
+  }
+
+  imprimirPantalla(triger: any, button: any){
+    console.log('boton', button);
+    console.log('triger', triger);
+    this.estaEnElBoton = true;
+    triger.openMenu();
+  }
+
+  cerrarMenu(triger: any){
+    this.estaEnElMenu = false;
+    this.estaEnElBoton = false;
+    setTimeout(() => {
+      if(this.estaEnElMenu){
+
+      } else if (this.estaEnElBoton) {
+
+      } else {
+        triger.closeMenu();
+      }
+    },200)
+  }
+
+  menuenter(){
+    console.log("Esta ene el menu");
+    this.estaEnElMenu = true;
+  }
 }

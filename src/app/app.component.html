@@ -1,13 +1,21 @@
 <mat-sidenav-container style="background-color: whitesmoke" fullscreen >
   <mat-sidenav #sidenav mode="over" class="background-primary">
-    <p style="padding: 10px">Micro pigmentacion</p>
-    <p style="padding: 10px">Micro pigmentacion</p>
+    <button mat-button [matMenuTriggerFor]="microPi">Micro pigmentación</button>
+    <mat-menu #microPi="matMenu">
+      <button mat-menu-item >MICROBLADING</button>
+      <button mat-menu-item >CORRECCION DE DISEÑO</button>
+      <button mat-menu-item >MICROSHADING</button>
+      <button mat-menu-item >RETOQUE DE AÑO</button>
+      <button mat-menu-item >CEJAS HIBRIDAS</button>
+      <button mat-menu-item >RETOQUE DE MES</button>
+    </mat-menu>
+
   </mat-sidenav>
   <mat-toolbar style="background-color: #d0a6a5">
     <button fxShow="true" fxHide.gt-sm="true" (click)="sidenav.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon style="color: white">menu</mat-icon>
     </button>
-    <span style="color: white; font-family: Trebuchet MS,serif">Z A H A</span>
-    <button mat-icon-button fxShow="true" fxHide.lt-md="true"> Menu normal</button>
+    <app-menu-principal></app-menu-principal>
   </mat-toolbar>
+  <div id="elementoAncla">Hola</div>
 </mat-sidenav-container>
